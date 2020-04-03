@@ -1,4 +1,18 @@
-countries_and_code = {
+import logging
+
+def setup_logger(log_file_name):
+    FORMATTER = logging.Formatter("%(asctime)s:%(funcName)s:%(levelname)s\n%(message)s")
+    # console_logger = logging.StreamHandler(sys.stdout)
+    file_logger = logging.FileHandler(log_file_name)
+    file_logger.setFormatter(FORMATTER)
+
+    logger = logging.getLogger(log_file_name)
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(file_logger)
+    logger.propagate = False
+    return logger
+
+country_codes = {
   'AFGHANISTAN': 'AF',
   'ALBANIA': 'AL',
   'ALGERIA': 'DZ',

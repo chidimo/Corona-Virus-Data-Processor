@@ -11,3 +11,5 @@
     1. Get a list of all kernels `jupyter kernelspec list`
     1. Delete a kernel `jupyter kernelspec uninstall <kernel-name>`
 1. Install `pipenv install mongoengine dnspython`
+
+Flags: <https://www.countryflags.io/>
