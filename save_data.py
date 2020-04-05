@@ -1,10 +1,9 @@
 import csv
 import requests
-import datetime
 from contextlib import closing
 
 from mongoengine import connect, disconnect, StringField, IntField, ReferenceField, DateField, Document
-from utils import *
+from utils import country_codes, setup_logger
 
 logger = setup_logger('log.log')
 disconnect()
