@@ -5,7 +5,7 @@ from contextlib import closing
 from mongoengine import connect, disconnect, StringField, IntField, ReferenceField, DateField, Document
 from utils import country_codes, setup_logger
 
-logger = setup_logger('log.log')
+logger = setup_logger('coronavirus.log')
 disconnect()
 connect(db='corona', host='mongodb+srv://primary:JYfLLsBVc3LgkPmx@coronacluster-0g0lt.gcp.mongodb.net/corona')
 logger.info('\n\n\n*******Starting a new run *******\n')
